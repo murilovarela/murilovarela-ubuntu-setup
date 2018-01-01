@@ -183,7 +183,7 @@ do
     ;;
 
     14)
-      echo "Installing Plank Docker (${counter}/${totalOperations})"
+      echo "Installing Arc Theme (${counter}/${totalOperations})"
 
       sudo add-apt-repository ppa:noobslab/themes
       sudo add-apt-repository ppa:noobslab/icons
