@@ -172,7 +172,7 @@ do
     12)
       echo "Installing Unity Tweak Tool (${counter}/${totalOperations})"
 
-      sudo apt-get install unity-tweak-tool -y
+      sudo apt install unity-tweak-tool -y
     ;;
 
     13)
@@ -180,7 +180,7 @@ do
 
       sudo add-apt-repository -y ppa:ricotz/docky
       sudo apt-get update -y
-      sudo apt-get install plank -y
+      sudo apt install plank -y
     ;;
 
     14)
