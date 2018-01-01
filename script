@@ -132,16 +132,15 @@ do
       sudo apt-get install unzip -y
       wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip -O sdk-tools-linux.zip
       unzip sdk-tools-linux.zip -d ~/android
-      echo "export ANDROID_HOME=~/android" >> ~/.bashrc
-      echo "export PATH=$ANDROID_HOME/tools" >> ~/.bashrc
-      echo "export PATH=$ANDROID_HOME/platforms" >> ~/.bashrc
+      echo "export ANDROID_HOME=~/android
+      export PATH=$PATH:~/android/tools:~/android/tools/bin:~/android/platforms" >> ~/.bashrc
 
       sudo -k
       wget https://raw.githubusercontent.com/murilovarela/avd-helper/master/avd-helper -O avd-helper
       chmod +x avd-helper
       mkdir ~/bin
       mv avd-helper ~/bin
-      echo "export SCRIPTS_HOME=~/bin" >> ~/.bashrc
+      export SCRIPTS_HOME="~/bin"
     ;;
 
     9)
