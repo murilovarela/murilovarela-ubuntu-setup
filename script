@@ -194,8 +194,7 @@ do
     15)
       echo "Installing Ruby (${counter}/${totalOperations})"
 
-      sudo -k
-      apt install ruby-full -y
+      sudo apt-get install ruby-full -y
     ;;
 
     16)
