@@ -51,10 +51,10 @@ do
     1)
       echo "Installing Google Chrome (${counter}/${totalOperations})"
 
-      wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+      wget -q -O key https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add key
       echo deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main | sudo tee /etc/apt/sources.list.d/google-chrome.list
-      apt-get update -y
-      apt-get install google-chrome-stable -y
+      sudo apt-get update -y
+      sudo apt-get install google-chrome-stable -y
     ;;
 
     2)
