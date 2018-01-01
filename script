@@ -7,6 +7,7 @@ echo "First we need to update and upgrade"
 #apt-get -qq update && sudo apt-get -qq upgrade -y
 
 sudo apt-get -qq install whiptail -y
+sudo apt -qq install git -y
 clear
 
 cmd=(
@@ -200,7 +201,7 @@ do
     16)
       echo "Installing Zsh (${counter}/${totalOperations})"
 
-      sudo apt-get install zsh -y
+      sudo apt install zsh -y
 
       sudo -k
       wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
