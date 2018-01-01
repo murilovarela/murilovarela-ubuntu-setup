@@ -200,21 +200,27 @@ do
     16)
       echo "Installing Zsh (${counter}/${totalOperations})"
 
+      sudo apt-get install zsh -y
+
       sudo -k
-      apt-get install zsh
       wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
       chsh -s `which zsh`
 
       echo "export REACTOTRON_HOME=~/reactotron" >> ~/.zshrc
-      echo "export PATH=$PATH:$REACTOTRON_HOME/Reactotron" >> ~/.zshrc
-      echo "export ANDROID_HOME=~/android" >> ~/.zshrc
-      echo "export PATH=$PATH:$ANDROID_HOME/tools" >> ~/.zshrc
-      echo "export PATH=$PATH:$ANDROID_HOME/platforms" >> ~/.zshrc
+      echo "export PATH=$PATH:~/reactotron/Reactotron" >> ~/.zshrc
+
+      echo "export ANDROID_HOME=~/android
+      export PATH=$PATH:~/android/tools:~/android/tools/bin:~/android/platforms" >> ~/.zshrc
+      echo "export PATH=$PATH:~/bin" >> ~/.zshrc
+
       echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk" >> ~/.zshrc
-      echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.zshrc
+      echo "export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin" >> ~/.zshrc
+
       echo "export NVM_DIR=$HOME/.nvm
-      [ -s $NVM_DIR/nvm.sh ] && . $NVM_DIR/nvm.sh"
+      [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh"
+
       echo "export SCRIPTS_HOME=~/bin" >> ~/.zshrc
+
       echo "ZSH_THEME="amuse"" >> ~/.zshrc
     ;;
 
